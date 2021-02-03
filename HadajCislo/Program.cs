@@ -2,9 +2,9 @@
 
 namespace HadajCislo
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // zobrazí privítanie na konzole
             Console.WriteLine("Vitaj v konzolovom svete League of Legends.");
@@ -25,7 +25,7 @@ namespace HadajCislo
             do
             {
                 // zobrazí počet zostávajúcich pokusov
-                Console.WriteLine($"Počet zostávajúcich pokusov: {chancesNumber}");
+                Console.WriteLine("Počet zostávajúcich pokusov: {0}", chancesNumber);
                 // požiada o hádanie čísla
                 Console.Write("Zadaj číslo: ");
                 // Získa číslo z konzoly ako text
@@ -45,7 +45,7 @@ namespace HadajCislo
                         isEnded = true;
                 }
                 catch (FormatException) {
-                    Console.WriteLine($"Premrhal si jednu šancu, \"{inputValue}\" nie je číslo!");
+                    Console.WriteLine("Premrhal si jednu šancu, \"{0}\" nie je číslo!", inputValue);
                 };
                 // zníž počet šancí o 1
                 chancesNumber = chancesNumber - 1;
@@ -64,7 +64,7 @@ namespace HadajCislo
                 Console.WriteLine("Prišiel si o všetky šance - Som víťaz. A ty porazený.");
 
             // Nechaj konzolu zobrazenú pokým nestlačí užívateľ klávesu enter
-            Console.ReadKey();
+            Console.ReadLine();
         }
 
     }
