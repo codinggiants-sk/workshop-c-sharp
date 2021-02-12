@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace HadajCislo
 {
     public class Program
@@ -9,9 +8,9 @@ namespace HadajCislo
             // zobrazí privítanie na konzole
             Console.WriteLine("Vitaj v konzolovom svete League of Legends.");
             Console.WriteLine("Som Twisted Faith - pán kariet. Jeden z hrdinov League of Legends");
-            Console.WriteLine("Náhodne som vybral jednu zo svojich Kariet. Aby si ma porazil, musíš uhádnuť r (1 - 100)");
-            Console.WriteLine("Máš iba 7 pokusov.");
-
+            Console.WriteLine("Náhodne som vybral jednu zo svojich Kariet.");
+            Console.WriteLine("Ak ma chceš poraziť, musíš uhádnuť číslo mojej karty (1 - 100).");
+            
             // vytvorí generátor pseudo náhodných čísiel
             Random random = new Random();
             // náhodne vyberie číslo od 1 do 100
@@ -36,10 +35,10 @@ namespace HadajCislo
                     int inputNumber = int.Parse(inputValue);
                     // Ak náš pokus je väčší
                     if (inputNumber > toGuess)
-                        Console.WriteLine("H@ H@ H@ Príliš veľa!!!");
+                        Console.WriteLine("H@ H@ H@ {0} je príliš veľa!!!", inputNumber);
                     // Ak náš pokus je menší
                     else if (inputNumber < toGuess)
-                        Console.WriteLine("H@ H@ H@ Príliš málo!!!");
+                        Console.WriteLine("H@ H@ H@ {0} je príliš málo!!!", inputNumber);
                     // Museli sme uhádnuť, nastavíme premennú isEnded na true
                     else
                         isEnded = true;
@@ -57,12 +56,12 @@ namespace HadajCislo
             } while (isEnded == false);
 
             // ak sme skončili slučku a hráč má ešte nejaké šance znamená to že vyhral
-            if (chancesNumber > 0)
+            if (chancesNumber >= 1)
                 Console.WriteLine("Ó nie! Uhádol si číslo mojej karty. Porazil si ma...");
             // inak musel prehrať
             else
                 Console.WriteLine("Prišiel si o všetky šance - Som víťaz. A ty porazený.");
-
+            
             // Nechaj konzolu zobrazenú pokým nestlačí užívateľ klávesu enter
             Console.ReadLine();
         }
