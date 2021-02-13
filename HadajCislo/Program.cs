@@ -16,10 +16,10 @@ namespace HadajCislo
             // náhodne vyberie číslo od 1 do 100
             // a uloží ho do premennej
             int toGuess = random.Next(1, 101);
+            // Console.WriteLine(" * moja karta je {0}", toGuess);
 
             // zbytok premenných
             int chancesNumber = 7;
-            bool isEnded = false;
 
             do
             {
@@ -41,19 +41,15 @@ namespace HadajCislo
                         Console.WriteLine("H@ H@ H@ {0} je príliš málo!!!", inputNumber);
                     // Museli sme uhádnuť, nastavíme premennú isEnded na true
                     else
-                        isEnded = true;
+                        break;
                 }
                 catch (FormatException) {
                     Console.WriteLine("Premrhal si jednu šancu, \"{0}\" nie je číslo!", inputValue);
                 };
                 // zníž počet šancí o 1
-                chancesNumber = chancesNumber - 1;
-                // zisti či ešte máme šancu
-                if (chancesNumber <= 0)
-                    // ak nie nastav premennú isEnded na true
-                    isEnded = true;
+                chancesNumber -= 1;  // to isté ako chancesNumber = chancesNumber - 1;
 
-            } while (isEnded == false);
+            } while (chancesNumber > 0);
 
             // ak sme skončili slučku a hráč má ešte nejaké šance znamená to že vyhral
             if (chancesNumber >= 1)
