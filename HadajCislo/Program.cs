@@ -7,7 +7,7 @@ namespace HadajCislo
         {
             // zobrazí privítanie na konzole
             Console.WriteLine("Vitaj v konzolovom svete League of Legends.");
-            Console.WriteLine("Som Twisted Faith - pán kariet. Jeden z hrdinov League of Legends");
+            Console.WriteLine("Som Twisted Fate - pán kariet. Jeden z hrdinov League of Legends");
             Console.WriteLine("Náhodne som vybral jednu zo svojich Kariet.");
             Console.WriteLine("Ak ma chceš poraziť, musíš uhádnuť číslo mojej karty (1 - 100).");
             
