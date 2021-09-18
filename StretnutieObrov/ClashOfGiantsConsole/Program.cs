@@ -127,7 +127,7 @@ namespace ClashOfGiantsConsole
             // vytvoríme pomocnú premennú na uloženie výsledku
             // funkcia Next má 2 parametre - hornú a dolnú hranicu intervalu, z ktorého generujeme náhodné čísla
             // maximum nie je zahrnuté v tomto intervale
-            int drawnPoints = random.Next(1, 6);
+            int drawnPoints = random.Next(1, 7);
 
             return drawnPoints;
         }
